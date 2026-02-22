@@ -21,5 +21,5 @@ Kumpulan materi [OSN Informatika](https://osn.toki.id)
 - [dan lain-lain...](https://clist.by/resources/)
 
 ### Sumber Lain
-- https://bebras.or.id/v3/pembahasan-soal/ - Latihan soal computational thinking OSN-K
-- https://cp-algorithms.com/ - Algoritma-algoritma untuk pemrograman kompetitif
+- [Bebras](https://bebras.or.id/v3/pembahasan-soal/) - Latihan soal computational thinking OSN-K
+- [cp-algorithms](https://cp-algorithms.com/) - Algoritma-algoritma untuk pemrograman kompetitif

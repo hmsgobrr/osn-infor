@@ -1,9 +1,9 @@
 # Barisan dan Deret
 **Barisan** (*sekuens*) secara umum adalah kumpulan objek (dalam kasus ini adalah bilangan) dalam urutan tertentu. Berbeda dengan himpunan, objek dalam barisan bisa muncul lebih dari sekali jika dalam urutan yang berbeda.
 
-Suku sebuah barisan $a$ biasanya dinyatakan dalam bentuk $a_n$ yang artinya suku ke-$n$ barisan (atau juga $U_n$ yang lebih umum di sekolah). Dalam artikel ini, sebuah barisan dimulai dari $n=1$ (terkadang barisan dimulai dari $n=0$).
+Suku sebuah barisan $a$ biasanya dinyatakan dalam bentuk $a_n$ yang artinya suku ke-$n$ barisan (atau juga $U_n$ yang lebih umum di sekolah). Dalam artikel ini, sebuah barisan dimulai dari $n=1$ sementara di beberapa literatur lain barisan mungkin dimulai dari $n=0$.
 
-Sementara itu, **Deret** (*partial sum* atau *series*) adalah penjumlahan suku pertama hingga suku ke-$n$ (*partial sum*) ataupun ke-$\infty$ (*series*).
+Sementara itu, **deret** (*partial sum* atau *series*) adalah penjumlahan suku pertama hingga suku ke-$n$ (*partial sum*) ataupun ke-$\infty$ (*series*).
 
 $$
 S_n = \sum_{i=1}^{n} U_n = U_1 + U_2 + ... + U_n
