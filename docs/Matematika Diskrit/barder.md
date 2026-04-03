@@ -6,18 +6,18 @@ Suku sebuah barisan $a$ biasanya dinyatakan dalam bentuk $a_n$ yang artinya suku
 Sementara itu, **deret** (*partial sum* atau *series*) adalah penjumlahan suku pertama hingga suku ke-$n$ (*partial sum*) ataupun ke-$\infty$ (*series*).
 
 $$
-S_n = \sum_{i=1}^{n} U_n = U_1 + U_2 + ... + U_n
+S_n = \sum_{i=1}^{n} U_n = U_1 + U_2 + \cdots + U_n
 $$
 
 $$
-S_\infty = \sum_{i=1}^{\infty} U_n = U_1 + U_2 + U_3 + ...
+S_\infty = \sum_{i=1}^{\infty} U_n = U_1 + U_2 + U_3 + \cdots
 $$
 
 ## Barisan dan Deret Aritmatika
 Barisan aritmatika adalah barisan yang selisih antara suku bersebelahan tetap. Dengan kata lain, untuk setiap $n\geq1$ berlaku:
 
 $$
-U_{n+1} - U_n = b
+U_{n+1} = U_n + b
 $$
 
 dengan suatu konstanta $b$ sehingga setiap suku barisan aritmatika bisa dinyatakan dalam bentuk:
@@ -42,7 +42,7 @@ Rumus deret aritmatika dapat dibuktikan secara visual dengan menganggap masing-m
 
 ![gambar](visualproof-barder1.png)
 
-Yang dicari, $S_n$, dalam kasus ini adalah jumlah luas seluruh persegi panjang di atas. Perhatikan ketika bangun datar di atas diduplikat, diputar, kemudian dipasangkan, kita akan mendapatkan persegi panjang dengan panjang $U_1 + (n-1)b$ dan lebar $n$
+Yang dicari, $S_n$, dalam kasus ini adalah jumlah luas seluruh persegi panjang di atas. Perhatikan ketika bangun datar di atas diduplikat, diputar, kemudian dipasangkan, kita akan mendapatkan persegi panjang dengan panjang $2U_1 + (n-1)b$ dan lebar $n$
 
 ![gambar](visualproof-barder2.png)
 
@@ -54,20 +54,33 @@ $$
 S_n = \frac{1}{2}n(2U_1 + (n-1)b)
 $$
 
+yang juga sama dengan:
+
+$$
+S_n = \frac{n}{2}(U_1 + U_n)
+$$
+
 ### Penurunan Rumus Deret aritmatika secara aljabar
 
-Rumus deret aritmatika juga dapat dibuktikan secara aljabar. Caranya sedikit mirip. Kali ini, yang diduplikat dan dibalik adalah urutan penjumlahan barisan.
+Rumus deret aritmatika juga dapat dibuktikan secara aljabar. Caranya sedikit mirip. Kali ini, yang diduplikat dan dibalik adalah urutan penjumlahan barisan. Pertama-tama, uraikan setiap suku dalam penjumlahan dalam $S_n$:
+
+$$
+S_n = U_1 + (U_1 + b) + \cdots + (U_1 + (n-2)b) + (U_1 + (n-1)b)
+$$
+
+Perhatikan bahwa karena penjumlahan adalah operasi komutatif, urutan penjumlahan bisa saja dibalik seperti berikut:
+
+$$
+S_n = (U_1 + (n-1)b) + (U_1 + (n-2)b) + \cdots + (U_1 + b) +  U_1
+$$
+
+Sekarang, jumlahkan kedua $S_n$. Setiap suku dijumlahkan dengan suku lain yang bersesuaian di $S_n$ lainnya.
 
 \begin{align*}
-S_n &=\quad U_1            &+&\quad(U_1 + b)      &+\quad...\quad+& \quad (U_1 + (n-2)b) &+& \quad (U_1 + (n-1)b)\\
-S_n &=\quad(U_1 + (n-1)b) &+&\quad(U_1 + (n-2)b) &+\quad...\quad+& \quad (U_1 + b)      &+& \quad U_1
+S_n  &=\quad U_1             &+&\quad (U_1 + b)       &+\quad\cdots\quad+& \quad (U_1 + (n-2)b)  &+& \quad (U_1 + (n-1)b)\\
+S_n  &=\quad (U_1 + (n-1)b)  &+&\quad (U_1 + (n-2)b)  &+\quad\cdots\quad+& \quad (U_1 + b)       &+& \quad U_1           \\ \hline
+2S_n &=\quad (2U_1 + (n-1)b) &+&\quad (2U_1 + (n-1)b) &+\quad\cdots\quad+& \quad (2U_1 + (n-1)b) &+& \quad (2U_1 + (n-1)b)
 \end{align*}
-
-Ketika deret dan deret yang dibalik dijumlahkan dengan setiap suku deret dijumlahkan dengan suku yang bersesuaian, akan diperoleh:
-
-$$
-S_n + S_n = (2U_1 + (n-1)b) + (2U_1 + (n-1)b) + ... + (2U_1 + (n-1)b) + (2U_1 + (n-1)b)
-$$
 
 Perhatikan bahwa setiap suku dari hasil penjumlahan menjadi $2U_1 + (n-1)b$ sehingga:
 
@@ -98,7 +111,7 @@ $$
 S_n = \frac{r^n - 1}{r-1}U_1
 $$
 
-Jika r memenuhi $-1<r<1$, $r^n$ dan $U_n$ akan mendekati $0$ seiring $n$ mendekati $\infty$ sehingga deret tak hingga akan $S_\infty$ menjadi **konvergen** yakni mendekati suatu nilai:
+Jika r memenuhi $-1<r<1$, maka $r^n$ dan $U_n$ akan mendekati $0$ seiring $n$ mendekati $\infty$ sehingga deret tak hingga akan $S_\infty$ menjadi **konvergen** yakni mendekati suatu nilai:
 
 $$
 S_\infty = \frac{U_1}{1-r}
@@ -109,8 +122,8 @@ $$
 Penurunan rumus deret geometri dapat dilakukan dengan cara yang mirip dengan rumus deret aritmatika (diduplikat, dimodifikasi, kemudian digabungkan). Namun, kali ini kita memodifikasi duplikat dengan mengalikannya dengan $r$ sehingga deret "tergeser" seperti berikut:
 
 \begin{align*}
-S_n  &= \quad U_1 &+&\quad rU_1 &+\quad...\quad+& \quad r^{n-2}U_1 &+& \quad r^{n-1}U_1 && {}\\
-rS_n &= \quad {}  && \quad rU_1 &+\quad...\quad+& \quad r^{n-2}U_1 &+& \quad r^{n-1}U_1 &+& \quad r^nU_1
+S_n  &= \quad U_1 &+&\quad rU_1 &+\quad\cdots\quad+& \quad r^{n-2}U_1 &+& \quad r^{n-1}U_1 && {}\\
+rS_n &= \quad {}  && \quad rU_1 &+\quad\cdots\quad+& \quad r^{n-2}U_1 &+& \quad r^{n-1}U_1 &+& \quad r^nU_1
 \end{align*}
 
 Dengan ini, jika **dikurangkan**, yang tersisa hanyalah:
@@ -136,7 +149,7 @@ $$
 **Problem:** Apa rumus umum dari deret di bawah.
 
 $$
-S_n = 1 + 11 + 111 + 1111 + ... + U_n
+S_n = 1 + 11 + 111 + 1111 + \cdots + U_n
 $$
 
 **Jawaban:**
@@ -146,7 +159,7 @@ Karena selisih ataupun rasio antara suku bersebelahan tidak konstan, rumus deret
 Kita akan mencari rumus umum $U_n$ terlebih dahulu. Perhatikan bahwa $U_n$ dapat dinyatakan sebagai **deret geometri** dengan rasio 10. Kita anggap saja suku dari deret $U_n$, sebagai $a_n$:
 
 $$
-U_n = 1 + 10 + 100 + 1000 + ... + a_n
+U_n = 1 + 10 + 100 + 1000 + \cdots + a_n
 $$
 
 Dengan ini, $U_n$ bisa diungkapkan melalui rumu deret geometri:
